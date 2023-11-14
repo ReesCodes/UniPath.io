@@ -1,7 +1,9 @@
+"use client";
 // React
 import * as React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+
 
 // Material UI
 import AppBar from '@mui/material/AppBar';
@@ -14,6 +16,14 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Container from '@mui/material/Container';
 import SchoolIcon from '@mui/icons-material/School';
+
+
+//AWS
+import { Authenticator } from '@aws-amplify/ui-react';
+import { Amplify } from 'aws-amplify';
+import awsExports from './aws-exports';
+
+Amplify.configure(awsExports);
 
 // Page: LandingPage
 export default function LandingPage() {
